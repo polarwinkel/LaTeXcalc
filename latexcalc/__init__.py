@@ -165,7 +165,10 @@ def _trig(formula, values, trig):
     # radiant only, because there is no native degree-symbol (I use '^\circ')
     digits = '0123456789.-'
     part0 = formula[0:formula.find(trig)]
-    formula = formula[formula.find(trig)+4:]
+    if trig in [r'\arcsin',r'\arccos',r'\arctan']:
+        formula = formula[formula.find(trig)+7:]
+    else:
+        formula = formula[formula.find(trig)+4:]
     part1 = ''
     part2 = ''
     for i in range(len(formula)):
