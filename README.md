@@ -17,9 +17,9 @@ LaTeXcalc can handle the following LaTeX-operations:
 - power `^`
 - brackets `()`, `[]` and `{}` (also with `\left(`..`\right)`)
 - squareroot `\sqrt{}`
-- trigonometric functions like `\sin` or `\arctan`
+- trigonometric functions like `\sin` or `\arctan` (radian measure)
 - exponential numbers linke `1e+12`
-- `\log` and `e^`
+- `\ln` (natural log), `\log` (base 10) and `e^`
 - `\pi` or `pi` and `e` as default-values `math.pi` and `math.e`
 - `\frac{}{}` (works as abbreviated `\frac 1 2` as well)
 
