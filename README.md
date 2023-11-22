@@ -36,8 +36,8 @@ import latexcalc
 
 c = latexcalc.calc('\sqrt{3^2+4^2}')
 # or with variables:
-c = latexcalc.calc(\sqrt(a^2+b^2)', {'a':3,'b':4})
-print(c) # 5
+c = latexcalc.calc('\sqrt(a^2+b^2)', {'a':3,'b':4})
+print(c) # 5.0
 ```
 
 ## Limitations
@@ -45,10 +45,11 @@ print(c) # 5
 All testet cases work, but there might still be wrong calculations in
 special cases, so test it for your needs!
 
-## Something missing?
+## Anything wrong? Something missing?
 
 Feel free to submit an issue if you find a bug or if you think something important is missing.
-In that case please add a Line for the `test.py` to show the desired operation!
+
+Just check out the latest code on GitHub and test your issue as it is done for some cases in the `test.py`. Then please add a Line for the `test.py` to your report to show the desired operation!
 
 ## Alternatives
 

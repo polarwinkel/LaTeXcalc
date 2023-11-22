@@ -1,6 +1,6 @@
 #!/bin/python3
 
-import texCalc
+import latexcalc
 import math
 
 
@@ -22,7 +22,7 @@ tests.append([r'2\frac 1 2 2*\frac 1 3      ', 2+(1/2)*2*(1/3), 'fractions witho
 tests.append([r'2*\frac{14}{10}+2           ', 2*14/10+2, 'fractions with {} brackets (normal form)'])
 
 for test in tests:
-    if texCalc.calc(test[0]) == test[1]:
+    if latexcalc.calc(test[0]) == test[1]:
         print('ok:   '+test[0]+' > '+test[2])
     else:
         print('FAIL: '+test[0]+' # result: '+str(texCalc.calc(test[0])))
@@ -39,7 +39,7 @@ tests = []
 tests.append([r'\sqrt(a^2+b^2)                          ', {'a':3,'b':4}, 5, 'pythagoras with values'])
 tests.append([r'-\frac{p}{2}-\sqrt{{\frac{p}{2}}^2-q}   ', {'p':4,'q':3}, -2-math.sqrt(4-3), 'pythagoras with values'])
 for test in tests:
-    if texCalc.calc(test[0], test[1]) == test[2]:
+    if latexcalc.calc(test[0], test[1]) == test[2]:
         print('ok:   '+test[0]+' > '+test[3])
     else:
         print('FAIL: '+test[0]+' # result: '+str(texCalc.calc(test[0], test[1])))

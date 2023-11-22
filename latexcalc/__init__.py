@@ -158,7 +158,6 @@ def _rekcalc(formula, values={}):
                 part2 = last[i:]
                 break
             exponent = exponent+last[i]
-            print(exponent)
         formula = part0+str(math.pow(_rekcalc(base, values),_rekcalc(exponent, values)))+part2
         formula = str(_rekcalc(formula, values)) # resolve remaining
     # log:
